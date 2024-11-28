@@ -1,0 +1,21 @@
+﻿@page
+
+@model testBold.Pages.ReportingModel;
+@using BoldReports.Models.ReportViewer
+@using BoldReports.ReportViewerEnums
+@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment _hostingEnvironment
+
+
+
+<div style="min-height: 950px; width: 100%;">
+    <bold-report-viewer id="viewer"
+                        report-path="@Model.ReportPath"
+                        report-service-url="api/ReportViewer"
+                        processing-mode="Remote"
+                        export-settings="@(new ExportSettings { ExportOptions = ExportOptions.All & ~Model.DisabledExportOptions })"
+                        toolbar-settings="@(new ToolbarSettings { Items = ToolbarItems.All & ~ToolbarItems.Analytics & ~ToolbarItems.Settings })">
+
+    </bold-report-viewer>
+</div>
+
+

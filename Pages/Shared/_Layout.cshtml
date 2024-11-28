@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Report Viewer component styles -->
+    <link href="~/BoldReportsAssets/css/bold.report-viewer.min.css" rel="stylesheet" />
+    <!-- Report Viewer component dependent script -->
+    <script src="~/BoldReportsAssets/js/jquery.min.js"></script>
+    <script src="~/BoldReportsAssets/js/bold.reports.common.min.js"></script>
+    <script src="~/BoldReportsAssets/js/bold.reports.widgets.min.js"></script>
+
+    <!-- Report Viewer component script -->
+    <script src="~/BoldReportsAssets/js/bold.report-viewer.min.js"></script>
+</head>
+<body>
+
+
+    <div>
+        @RenderBody()
+    </div>
+
+    @RenderSection("Scripts", required: false)
+    <!-- Bold Reports script manager -->
+    <bold-script-manager></bold-script-manager>
+
+</body>
+</html>
