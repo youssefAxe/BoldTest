@@ -38,4 +38,9 @@ http://192.168.1.100:8080/reporting?ReportPath=Test.rdl
 - **Network Issues**: Make sure the IP address and port are accessible from your network.
 - **Report Not Found**: Ensure the report file `Test.rdl` is in the correct directory and the path is specified correctly.
 
+  ## Expected Output
+
+  ![image](https://github.com/user-attachments/assets/f3b2eb55-78c6-42f1-808e-d5776b5b2f40)
+
+
 ## License
