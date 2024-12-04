@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.IO;
 using System;
+using Microsoft.AspNetCore.Http;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,5 +30,6 @@ app.UseRouting();
 app.MapControllers();
 
 app.UseAuthorization();
+app.MapGet("/", () => Results.Redirect("Reporting?ReportPath=Test.rdl"));
 app.MapRazorPages();
 app.Run();
