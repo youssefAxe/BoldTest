@@ -1,10 +1,20 @@
+-- Step 1: Create the database
+CREATE DATABASE ReportsBold;
+GO
+
+-- Step 2: Switch to the newly created database
+USE ReportsBold;
+GO
+
+-- Step 3: Create the table 'testreport'
 CREATE TABLE testreport (
-    id INT PRIMARY KEY,      -- id is of type INT and will be the primary key
-    text1 NVARCHAR(255),     -- text1 is a string column with a maximum length of 255 characters
-    text2 NVARCHAR(255)      -- text2 is a string column with a maximum length of 255 characters
+    id INT PRIMARY KEY,          -- id is of type INT and will be the primary key
+    text1 NVARCHAR(255),         -- text1 is a string column with a maximum length of 255 characters
+    text2 NVARCHAR(255)          -- text2 is a string column with a maximum length of 255 characters
 );
+GO
 
-
+-- Step 4: Insert sample data into the 'testreport' table
 INSERT INTO testreport (id, text1, text2)
 VALUES
 (1, 'Hello', 'World'),
@@ -12,3 +22,4 @@ VALUES
 (3, 'SSRS', 'Rocks'),
 (4, 'SQL', 'Server'),
 (5, 'Data', 'Driven');
+GO
